@@ -1,0 +1,1068 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/17/2023 5:01:58 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-6APU3IN"
+  DTS:CreatorName="DESKTOP-6APU3IN\XPC"
+  DTS:DTSID="{9A95BE78-355A-4919-8D76-842958D7805A}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{7D2C11B1-13EB-4D00-BA03-28B10B484EDF}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{7E00DA55-EDDF-49F6-BD8E-3A9C06CFFC6C}"
+      DTS:ObjectName="Administrador de conexiones con Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=E:\Estef221\ufide\Data Warehouse\DataWarehouse 2\proyecto\Llegadas2019-2022.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{C1E2A44E-D394-43CB-B1F7-B54C2CE3A1AB}"
+      DTS:ObjectName="Administrador de conexiones con Excel 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=E:\Estef221\ufide\Data Warehouse\DataWarehouse 2\proyecto\Llegadas2019-2022.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-6APU3IN\SQLEXPRESS.Test2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1DB5D0C2-49DF-45C4-B037-4566F785F519}"
+      DTS:ObjectName="DESKTOP-6APU3IN\SQLEXPRESS.Test2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-6APU3IN\SQLEXPRESS;Initial Catalog=Test2;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{1DB5D0C2-49DF-45C4-B037-4566F785F519}DESKTOP-6APU3IN\SQLEXPRESS.Test2;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Llegadas"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{32259451-31CA-4088-903E-5EB046C6D81A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Llegadas"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Llegadas\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Llegadas\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Llegadas\Data Conversion.Inputs[Data Conversion Input].Columns[Mes]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Mes"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Mes]" />
+                    <inputColumn
+                      refId="Package\Llegadas\Data Conversion.Inputs[Data Conversion Input].Columns[Llegadas]"
+                      cachedDataType="r8"
+                      cachedName="Llegadas"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Llegadas]" />
+                    <inputColumn
+                      refId="Package\Llegadas\Data Conversion.Inputs[Data Conversion Input].Columns[Año]"
+                      cachedDataType="r8"
+                      cachedName="Año"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Año]" />
+                    <inputColumn
+                      refId="Package\Llegadas\Data Conversion.Inputs[Data Conversion Input].Columns[Puesto_migratorio]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Puesto_migratorio"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Puesto_migratorio]" />
+                    <inputColumn
+                      refId="Package\Llegadas\Data Conversion.Inputs[Data Conversion Input].Columns[Nacionalidad]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Nacionalidad"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Nacionalidad]" />
+                    <inputColumn
+                      refId="Package\Llegadas\Data Conversion.Inputs[Data Conversion Input].Columns[Sexo]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Sexo"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Sexo]" />
+                    <inputColumn
+                      refId="Package\Llegadas\Data Conversion.Inputs[Data Conversion Input].Columns[Tipo_acceso]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Tipo_acceso"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Tipo_acceso]" />
+                    <inputColumn
+                      refId="Package\Llegadas\Data Conversion.Inputs[Data Conversion Input].Columns[Mes_movimiento]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Mes_movimiento"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Mes_movimiento]" />
+                    <inputColumn
+                      refId="Package\Llegadas\Data Conversion.Inputs[Data Conversion Input].Columns[Regiones]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Regiones"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Regiones]" />
+                    <inputColumn
+                      refId="Package\Llegadas\Data Conversion.Inputs[Data Conversion Input].Columns[Reg2]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Reg2"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Reg2]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Llegadas\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Mes]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Mes]"
+                      name="Copy of Mes"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Mes]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Llegadas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Llegadas]"
+                      name="Copy of Llegadas"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Llegadas]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Año]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Año]"
+                      name="Copy of Año"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Año]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Puesto_migratorio]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Puesto_migratorio]"
+                      name="Copy of Puesto_migratorio"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Puesto_migratorio]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Nacionalidad]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Nacionalidad]"
+                      name="Copy of Nacionalidad"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Nacionalidad]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sexo]"
+                      name="Copy of Sexo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Sexo]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Tipo_acceso]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Tipo_acceso]"
+                      name="Copy of Tipo_acceso"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Tipo_acceso]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Mes_movimiento]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Mes_movimiento]"
+                      name="Copy of Mes_movimiento"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Mes_movimiento]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Regiones]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Regiones]"
+                      name="Copy of Regiones"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Regiones]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reg2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reg2]"
+                      name="Copy of Reg2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Reg2]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Llegadas\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Llegadas\Importar Data llegadas"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Importar Data llegadas"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'2019$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Llegadas\Importar Data llegadas.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Mes]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Mes]"
+                      length="255"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Mes]"
+                      name="Mes"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Llegadas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Llegadas]"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Llegadas]"
+                      name="Llegadas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Año]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Año]"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Año]"
+                      name="Año"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Puesto_migratorio]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Puesto_migratorio]"
+                      length="255"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Puesto_migratorio]"
+                      name="Puesto_migratorio"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Nacionalidad]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Nacionalidad]"
+                      length="255"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Nacionalidad]"
+                      name="Nacionalidad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Sexo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Sexo]"
+                      length="255"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Sexo]"
+                      name="Sexo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Tipo_acceso]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Tipo_acceso]"
+                      length="255"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Tipo_acceso]"
+                      name="Tipo_acceso"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Mes_movimiento]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Mes_movimiento]"
+                      length="255"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Mes_movimiento]"
+                      name="Mes_movimiento"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Regiones]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Regiones]"
+                      length="255"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Regiones]"
+                      name="Regiones"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Reg2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Reg2]"
+                      length="255"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].Columns[Reg2]"
+                      name="Reg2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Mes]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mes" />
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Llegadas]"
+                      dataType="r8"
+                      name="Llegadas" />
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Año]"
+                      dataType="r8"
+                      name="Año" />
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Puesto_migratorio]"
+                      dataType="wstr"
+                      length="255"
+                      name="Puesto_migratorio" />
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Nacionalidad]"
+                      dataType="wstr"
+                      length="255"
+                      name="Nacionalidad" />
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Sexo]"
+                      dataType="wstr"
+                      length="255"
+                      name="Sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Tipo_acceso]"
+                      dataType="wstr"
+                      length="255"
+                      name="Tipo_acceso" />
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Mes_movimiento]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mes_movimiento" />
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Regiones]"
+                      dataType="wstr"
+                      length="255"
+                      name="Regiones" />
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Reg2]"
+                      dataType="wstr"
+                      length="255"
+                      name="Reg2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Mes]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Mes]"
+                      name="Mes" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Llegadas]"
+                      dataType="r8"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Llegadas]"
+                      name="Llegadas" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Año]"
+                      dataType="r8"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Año]"
+                      name="Año" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Puesto_migratorio]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Puesto_migratorio]"
+                      name="Puesto_migratorio" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Nacionalidad]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Nacionalidad]"
+                      name="Nacionalidad" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Sexo]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Sexo]"
+                      name="Sexo" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Tipo_acceso]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Tipo_acceso]"
+                      name="Tipo_acceso" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Mes_movimiento]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Mes_movimiento]"
+                      name="Mes_movimiento" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Regiones]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Regiones]"
+                      name="Regiones" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Reg2]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Reg2]"
+                      name="Reg2" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Llegadas\Insertar Data sqlServer"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insertar Data sqlServer"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[LLEGADAS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Llegadas\Insertar Data sqlServer.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6APU3IN\SQLEXPRESS.Test2]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6APU3IN\SQLEXPRESS.Test2]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of Mes]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Mes"
+                      externalMetadataColumnId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Mes]"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Mes]" />
+                    <inputColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of Llegadas]"
+                      cachedDataType="r8"
+                      cachedName="Copy of Llegadas"
+                      externalMetadataColumnId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Llegadas]"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Llegadas]" />
+                    <inputColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of Año]"
+                      cachedDataType="r8"
+                      cachedName="Copy of Año"
+                      externalMetadataColumnId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Año]"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Año]" />
+                    <inputColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of Puesto_migratorio]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Puesto_migratorio"
+                      externalMetadataColumnId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Puesto_migratorio]"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Puesto_migratorio]" />
+                    <inputColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of Sexo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Sexo"
+                      externalMetadataColumnId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Sexo]"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sexo]" />
+                    <inputColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of Tipo_acceso]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Tipo_acceso"
+                      externalMetadataColumnId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Tipo_acceso]"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Tipo_acceso]" />
+                    <inputColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of Mes_movimiento]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Mes_movimiento"
+                      externalMetadataColumnId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Mes_movimiento]"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Mes_movimiento]" />
+                    <inputColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of Regiones]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Regiones"
+                      externalMetadataColumnId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Regiones]"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Regiones]" />
+                    <inputColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of Reg2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Reg2"
+                      externalMetadataColumnId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Reg2]"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reg2]" />
+                    <inputColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of Nacionalidad]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Nacionalidad"
+                      externalMetadataColumnId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Nacionalidad]"
+                      lineageId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Nacionalidad]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Mes]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Mes" />
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Llegadas]"
+                      dataType="i4"
+                      name="Llegadas" />
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Año]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Año" />
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Puesto_migratorio]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Puesto_migratorio" />
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Nacionalidad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Nacionalidad" />
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Tipo_acceso]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Tipo_acceso" />
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Mes_movimiento]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Mes_movimiento" />
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Regiones]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Regiones" />
+                    <externalMetadataColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Reg2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Reg2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Llegadas\Insertar Data sqlServer.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Llegadas\Insertar Data sqlServer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Llegadas\Insertar Data sqlServer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Llegadas\Insertar Data sqlServer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Llegadas.Paths[Data Conversion Output]"
+              endId="Package\Llegadas\Insertar Data sqlServer.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Llegadas\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Llegadas.Paths[Excel Source Output]"
+              endId="Package\Llegadas\Data Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Llegadas\Importar Data llegadas.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="124,42"
+          Id="Package\Llegadas"
+          TopLeft="189,92" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Llegadas">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Llegadas\Importar Data llegadas"
+          TopLeft="177,92" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\Llegadas\Insertar Data sqlServer"
+          TopLeft="176,232" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Llegadas\Data Conversion"
+          TopLeft="411,174" />
+        <EdgeLayout
+          Id="Package\Llegadas.Paths[Excel Source Output]"
+          TopLeft="272,134">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="219.5,40"
+              Start="0,0"
+              End="219.5,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16"
+                    Point2="0,20"
+                    Point3="4,20" />
+                  <mssgle:LineSegment
+                    End="215.5,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="215.5,20"
+                    Point2="219.5,20"
+                    Point3="219.5,24" />
+                  <mssgle:LineSegment
+                    End="219.5,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Llegadas.Paths[Data Conversion Output]"
+          TopLeft="411,195">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-43,58"
+              Start="0,0"
+              End="-35.5,58">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-17.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17.5,0"
+                    Point2="-21.5,0"
+                    Point3="-21.5,4" />
+                  <mssgle:LineSegment
+                    End="-21.5,54" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21.5,54"
+                    Point2="-21.5,58"
+                    Point3="-25.5,58" />
+                  <mssgle:LineSegment
+                    End="-35.5,58" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Llegadas\Importar Data llegadas">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Llegadas\Insertar Data sqlServer">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
