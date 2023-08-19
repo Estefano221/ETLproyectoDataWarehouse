@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{ED5EF007-10A6-45F4-943D-ECB96213DE99}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{25227200-94D3-4063-BB57-AF6BB767D0D1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -89,7 +89,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJe4qN5QZ6UqG3090uR295wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA5YeuzNWX0u9+smgLnsWuAFoj0fw4pRsjiyt/+8ht03QAAAAAOgAAAAAIAACAAAACgDZ3WBI2J6L/F6MVO0h90dE2oDZU6vN4a8BKpI7wUKiAAAABeuFhwB/l5IaS+4AjhBn9YinXaF71HG6/Aes4cRtHxUUAAAABx6uDrempH7awokPTmHuqdyJnUWEwRw4pjabqcznrr07svBJZ7KAivr6jUcgsh+ANjluG3EkSBn7ZThkHwW5j/</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJe4qN5QZ6UqG3090uR295wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAANL5jUiTaTh59iw1DYil2O4U58Wjm5BoAjnDBcLmtKFQAAAAAOgAAAAAIAACAAAABs4OxT2kntjMHaugeP5pgAotbLsOo1ZAkGTacuIxw33SAAAAAAy1M1IJo20JNioS5jteoup/Yls/T0KlfkCh872+ighEAAAABqqBaOU/JfMPFGxkF+nRYJz3Dzm2K9Vk0RXRiEqmojht0IX0vbou5NBEUlinFm7yILPKH+2OjSsJ5ZF8unateE</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -135,12 +135,6 @@
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Aeropuertos\Data Conversion.Inputs[Data Conversion Input].Columns[Aeropuerto_Id+A1:C49]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Aeropuerto_Id+A1:C49"
-                      lineageId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Output].Columns[Aeropuerto_Id+A1:C49]" />
-                    <inputColumn
                       refId="Package\Aeropuertos\Data Conversion.Inputs[Data Conversion Input].Columns[ Cod_ISO3166_1]"
                       cachedDataType="wstr"
                       cachedLength="255"
@@ -152,6 +146,12 @@
                       cachedLength="255"
                       cachedName="Nombre_Aeropuerto"
                       lineageId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Output].Columns[Nombre_Aeropuerto]" />
+                    <inputColumn
+                      refId="Package\Aeropuertos\Data Conversion.Inputs[Data Conversion Input].Columns[Aeropuerto_Id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Aeropuerto_Id"
+                      lineageId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Output].Columns[Aeropuerto_Id]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -163,28 +163,6 @@
                   name="Data Conversion Output"
                   synchronousInputId="Package\Aeropuertos\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
-                    <outputColumn
-                      refId="Package\Aeropuertos\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Aeropuerto_Id+A1:C49]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Aeropuertos\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Aeropuerto_Id+A1:C49]"
-                      name="Copy of Aeropuerto_Id+A1:C49"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Output].Columns[Aeropuerto_Id+A1:C49]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
                     <outputColumn
                       refId="Package\Aeropuertos\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of  Cod_ISO3166_1]"
                       codePage="1252"
@@ -223,6 +201,28 @@
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Output].Columns[Nombre_Aeropuerto]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Aeropuertos\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Aeropuerto_Id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Aeropuertos\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Aeropuerto_Id]"
+                      name="Copy of Aeropuerto_Id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Output].Columns[Aeropuerto_Id]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -310,16 +310,6 @@
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Output].Columns[Aeropuerto_Id+A1:C49]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Aeropuerto_Id+A1:C49]"
-                      length="255"
-                      lineageId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Output].Columns[Aeropuerto_Id+A1:C49]"
-                      name="Aeropuerto_Id+A1:C49"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Output].Columns[ Cod_ISO3166_1]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -339,14 +329,19 @@
                       lineageId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Output].Columns[Nombre_Aeropuerto]"
                       name="Nombre_Aeropuerto"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Output].Columns[Aeropuerto_Id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Aeropuerto_Id]"
+                      length="255"
+                      lineageId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Output].Columns[Aeropuerto_Id]"
+                      name="Aeropuerto_Id"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Aeropuerto_Id+A1:C49]"
-                      dataType="wstr"
-                      length="255"
-                      name="Aeropuerto_Id+A1:C49" />
                     <externalMetadataColumn
                       refId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[ Cod_ISO3166_1]"
                       dataType="wstr"
@@ -357,6 +352,11 @@
                       dataType="wstr"
                       length="255"
                       name="Nombre_Aeropuerto" />
+                    <externalMetadataColumn
+                      refId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Aeropuerto_Id]"
+                      dataType="wstr"
+                      length="255"
+                      name="Aeropuerto_Id" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -365,11 +365,11 @@
                   name="Excel Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Aeropuerto_Id+A1:C49]"
+                      refId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Aeropuerto_Id]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Aeropuerto_Id+A1:C49]"
-                      name="Aeropuerto_Id+A1:C49" />
+                      lineageId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Aeropuerto_Id]"
+                      name="Aeropuerto_Id" />
                     <outputColumn
                       refId="Package\Aeropuertos\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[ Cod_ISO3166_1]"
                       dataType="wstr"
@@ -472,14 +472,6 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Aeropuertos\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of Aeropuerto_Id+A1:C49]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of Aeropuerto_Id+A1:C49"
-                      externalMetadataColumnId="Package\Aeropuertos\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Aeropuerto_Id]"
-                      lineageId="Package\Aeropuertos\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Aeropuerto_Id+A1:C49]" />
-                    <inputColumn
                       refId="Package\Aeropuertos\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of  Cod_ISO3166_1]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -495,6 +487,14 @@
                       cachedName="Copy of Nombre_Aeropuerto"
                       externalMetadataColumnId="Package\Aeropuertos\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Nombre_Aeropuerto]"
                       lineageId="Package\Aeropuertos\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Nombre_Aeropuerto]" />
+                    <inputColumn
+                      refId="Package\Aeropuertos\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of Aeropuerto_Id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Aeropuerto_Id"
+                      externalMetadataColumnId="Package\Aeropuertos\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Aeropuerto_Id]"
+                      lineageId="Package\Aeropuertos\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Aeropuerto_Id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
