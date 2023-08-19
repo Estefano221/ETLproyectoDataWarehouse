@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{25227200-94D3-4063-BB57-AF6BB767D0D1}">
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{21788C62-5F63-4537-A31F-59205E47C215}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -49,7 +49,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=E:\Estef221\ufide\Data Warehouse\DataWarehouse 2\proyecto\Aerolineas-Aeropuertos.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=E:\Estef221\ufide\Data Warehouse\DataWarehouse 2\proyecto\Aerolineas-Aeropuertos.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -61,7 +61,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=E:\Estef221\ufide\Data Warehouse\DataWarehouse 2\proyecto\Aerolineas-Aeropuertos.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=E:\Estef221\ufide\Data Warehouse\DataWarehouse 2\proyecto\Aerolineas-Aeropuertos.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -73,7 +73,19 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=E:\Estef221\ufide\Data Warehouse\DataWarehouse 2\proyecto\Llegadas2019-2022(1).xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=E:\Estef221\ufide\Data Warehouse\DataWarehouse 2\proyecto\Llegadas2019-2022(1).xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 5]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{E9841DF4-13DC-459C-8DA5-F3AB9EA7EE3B}"
+      DTS:ObjectName="Administrador de conexiones con Excel 5">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=E:\Estef221\ufide\Data Warehouse\DataWarehouse 2\proyecto\Llegadas2019-2022(1).xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -89,7 +101,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJe4qN5QZ6UqG3090uR295wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAANL5jUiTaTh59iw1DYil2O4U58Wjm5BoAjnDBcLmtKFQAAAAAOgAAAAAIAACAAAABs4OxT2kntjMHaugeP5pgAotbLsOo1ZAkGTacuIxw33SAAAAAAy1M1IJo20JNioS5jteoup/Yls/T0KlfkCh872+ighEAAAABqqBaOU/JfMPFGxkF+nRYJz3Dzm2K9Vk0RXRiEqmojht0IX0vbou5NBEUlinFm7yILPKH+2OjSsJ5ZF8unateE</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJe4qN5QZ6UqG3090uR295wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADqqFHb/SaRoBprI6beK+JusHQyxrCreuqny6YAaihCfQAAAAAOgAAAAAIAACAAAAC1gadFZm3fyu93ZOkExuvszDRxRM1BEfdA9AesySvniyAAAAAeXyQXo++J84NVk+GT6aS6zNZ4/WIls/HiK6+8lTRzFkAAAAB20zw/OjRS/QWXpi2YH+8sxLb8tmHa9NPKtPvd9AC/pNgYPKsivd23WYjEuab28I8hauiKI4lFlnOhFj/wJvax</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -415,7 +427,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Aeropuertos_Aerolineas]</property>
+                  name="OpenRowset">[dbo].[Aeropuertos_]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -4902,8 +4914,8 @@
               <connections>
                 <connection
                   refId="Package\RegSec\Importar Data llegadas.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel 5]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel 5]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4994,7 +5006,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Region]</property>
+                  name="OpenRowset">[dbo].[RegSec]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -5054,26 +5066,26 @@
                       refId="Package\RegSec\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of ID_RegionSec]"
                       cachedDataType="r8"
                       cachedName="Copy of ID_RegionSec"
-                      externalMetadataColumnId="Package\RegSec\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[ID_Region]"
+                      externalMetadataColumnId="Package\RegSec\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[ID_RegionSec]"
                       lineageId="Package\RegSec\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ID_RegionSec]" />
                     <inputColumn
                       refId="Package\RegSec\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of RegSec]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Copy of RegSec"
-                      externalMetadataColumnId="Package\RegSec\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      externalMetadataColumnId="Package\RegSec\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[RegSec]"
                       lineageId="Package\RegSec\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of RegSec]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\RegSec\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[ID_Region]"
+                      refId="Package\RegSec\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[ID_RegionSec]"
                       dataType="i4"
-                      name="ID_Region" />
+                      name="ID_RegionSec" />
                     <externalMetadataColumn
-                      refId="Package\RegSec\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      refId="Package\RegSec\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[RegSec]"
                       dataType="nText"
-                      name="Region" />
+                      name="RegSec" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -5119,6 +5131,64 @@
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{687F08C2-1855-4CC2-A1FA-10EB41ACA5A0}"
+      DTS:From="Package\RegSec"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Regiones" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{0B1E388D-68C1-4718-85E7-3DAA67489104}"
+      DTS:From="Package\Aeropuertos"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:To="Package\RegSec" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{77DDB85C-7AC3-497B-93E8-01FDB6F927D7}"
+      DTS:From="Package\Regiones"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 2"
+      DTS:To="Package\Llegadas 2021" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{D815AE8F-1EB5-44AA-9F46-979589B129CA}"
+      DTS:From="Package\Regiones"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 3"
+      DTS:To="Package\Llegadas 2020" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{D9E11B65-5C22-4E15-84E4-CDEED5435A6A}"
+      DTS:From="Package\Regiones"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 4"
+      DTS:To="Package\Llegadas 2022" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{82C9F459-4AC7-44A6-94AD-F820ED0FA4ED}"
+      DTS:From="Package\Regiones"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 5"
+      DTS:To="Package\Llegadas 2019" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{FF524C1D-9CEB-46E1-AE02-0359D738D025}"
+      DTS:From="Package\Llegadas 2019"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 6"
+      DTS:To="Package\LlegadasTotal" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
 <!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
@@ -5130,59 +5200,415 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Llegadas 2019"
-          TopLeft="19,105" />
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Llegadas 2020"
-          TopLeft="192,104" />
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Llegadas 2021"
-          TopLeft="366,104" />
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Llegadas 2022"
-          TopLeft="540,104" />
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="139,42"
           Id="Package\Aeropuertos"
-          TopLeft="23,182" />
+          TopLeft="501,29" />
         <NodeLayout
-          Size="126,42"
-          Id="Package\Regiones"
-          TopLeft="195,179" />
+          Size="151,42"
+          Id="Package\Llegadas 2019"
+          TopLeft="36,174" />
         <NodeLayout
-          Size="118,42"
-          Id="Package\RegSec"
-          TopLeft="350,180" />
+          Size="151,42"
+          Id="Package\Llegadas 2020"
+          TopLeft="359,185" />
+        <NodeLayout
+          Size="151,54"
+          Id="Package\Llegadas 2021"
+          TopLeft="204,220" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Llegadas 2022"
+          TopLeft="487,111" />
         <NodeLayout
           Size="148,42"
           Id="Package\LlegadasTotal"
-          TopLeft="498,183" />
+          TopLeft="292,352" />
+        <NodeLayout
+          Size="126,42"
+          Id="Package\Regiones"
+          TopLeft="263,82" />
+        <NodeLayout
+          Size="118,42"
+          Id="Package\RegSec"
+          TopLeft="276,0" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="335,42">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9,40"
+              Start="0,0"
+              End="-9,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16"
+                    Point2="0,20"
+                    Point3="-4,20" />
+                  <mssgle:LineSegment
+                    End="-5,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5,20"
+                    Point2="-9,20"
+                    Point3="-9,24" />
+                  <mssgle:LineSegment
+                    End="-9,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="501,50">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-107,-29"
+              Start="0,0"
+              End="-99.5,-29">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-49.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-49.5,0"
+                    Point2="-53.5,0"
+                    Point3="-53.5,-4" />
+                  <mssgle:LineSegment
+                    End="-53.5,-25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-53.5,-25"
+                    Point2="-53.5,-29"
+                    Point3="-57.5,-29" />
+                  <mssgle:LineSegment
+                    End="-99.5,-29" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 5]"
+          TopLeft="306.333333333333,124">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-194.833333333333,50"
+              Start="0,0"
+              End="-194.833333333333,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.3761755485893" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.3761755485893"
+                    Point2="0,20.3761755485893"
+                    Point3="-4,20.3761755485893" />
+                  <mssgle:LineSegment
+                    End="-190.833333333333,20.3761755485893" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-190.833333333333,20.3761755485893"
+                    Point2="-194.833333333333,20.3761755485893"
+                    Point3="-194.833333333333,24.3761755485893" />
+                  <mssgle:LineSegment
+                    End="-194.833333333333,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 2]"
+          TopLeft="345.666666666667,124">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-66.1666666666666,96"
+              Start="0,0"
+              End="-66.1666666666666,88.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.1222570532916" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.1222570532916"
+                    Point2="0,39.1222570532916"
+                    Point3="-4,39.1222570532916" />
+                  <mssgle:LineSegment
+                    End="-62.1666666666666,39.1222570532916" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-62.1666666666666,39.1222570532916"
+                    Point2="-66.1666666666666,39.1222570532916"
+                    Point3="-66.1666666666666,43.1222570532916" />
+                  <mssgle:LineSegment
+                    End="-66.1666666666666,88.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 3]"
+          TopLeft="355.5,124">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="79,61"
+              Start="0,0"
+              End="79,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.1761658031088" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.1761658031088"
+                    Point2="0,21.1761658031088"
+                    Point3="4,21.1761658031088" />
+                  <mssgle:LineSegment
+                    End="75,21.1761658031088" />
+                  <mssgle:CubicBezierSegment
+                    Point1="75,21.1761658031088"
+                    Point2="79,21.1761658031088"
+                    Point3="79,25.1761658031088" />
+                  <mssgle:LineSegment
+                    End="79,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 4]"
+          TopLeft="389,103">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="98,29"
+              Start="0,0"
+              End="90.5,29">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="45,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45,0"
+                    Point2="49,0"
+                    Point3="49,4" />
+                  <mssgle:LineSegment
+                    End="49,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="49,25"
+                    Point2="49,29"
+                    Point3="53,29" />
+                  <mssgle:LineSegment
+                    End="90.5,29" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 6]"
+          TopLeft="111.5,216">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="254.5,136"
+              Start="0,0"
+              End="254.5,128.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,64"
+                    Point2="0,68"
+                    Point3="4,68" />
+                  <mssgle:LineSegment
+                    End="250.5,68" />
+                  <mssgle:CubicBezierSegment
+                    Point1="250.5,68"
+                    Point2="254.5,68"
+                    Point3="254.5,72" />
+                  <mssgle:LineSegment
+                    End="254.5,128.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
+    design-time-name="Package\Aeropuertos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Aeropuertos\Importar Data llegadas"
+          TopLeft="177,92" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Aeropuertos\Data Conversion"
+          TopLeft="402,168" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\Aeropuertos\Insertar Data sqlServer"
+          TopLeft="176,232" />
+        <EdgeLayout
+          Id="Package\Aeropuertos.Paths[Excel Source Output]"
+          TopLeft="272,134">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="210.5,34"
+              Start="0,0"
+              End="210.5,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="4,17" />
+                  <mssgle:LineSegment
+                    End="206.5,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="206.5,17"
+                    Point2="210.5,17"
+                    Point3="210.5,21" />
+                  <mssgle:LineSegment
+                    End="210.5,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="88.88650390625,22,32.7269921875,9.7978515625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Aeropuertos.Paths[Data Conversion Output]"
+          TopLeft="402,189">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-34,64"
+              Start="0,0"
+              End="-26.5,64">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-13,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13,0"
+                    Point2="-17,0"
+                    Point3="-17,4" />
+                  <mssgle:LineSegment
+                    End="-17,60" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17,60"
+                    Point2="-17,64"
+                    Point3="-21,64" />
+                  <mssgle:LineSegment
+                    End="-26.5,64" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-33.36349609375,-15.7978515625,32.7269921875,9.7978515625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Aeropuertos\Importar Data llegadas">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Aeropuertos\Insertar Data sqlServer">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\Llegadas 2019">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="190,42"
           Id="Package\Llegadas 2019\Importar Data llegadas"
           TopLeft="177,92" />
         <NodeLayout
-          Size="161,42"
-          Id="Package\Llegadas 2019\Data Conversion"
-          TopLeft="411,174" />
-        <NodeLayout
           Size="192,42"
           Id="Package\Llegadas 2019\Insertar Data sqlServer"
           TopLeft="176,232" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Llegadas 2019\Data Conversion"
+          TopLeft="411,174" />
         <EdgeLayout
           Id="Package\Llegadas 2019.Paths[Excel Source Output]"
           TopLeft="272,134">
@@ -5214,7 +5640,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5248,7 +5676,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5284,53 +5714,19 @@
     design-time-name="Package\Llegadas 2020">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="190,42"
           Id="Package\Llegadas 2020\Importar Data llegadas"
           TopLeft="177,92" />
         <NodeLayout
-          Size="161,42"
-          Id="Package\Llegadas 2020\Data Conversion"
-          TopLeft="411,174" />
-        <NodeLayout
           Size="192,42"
           Id="Package\Llegadas 2020\Insertar Data sqlServer"
           TopLeft="176,232" />
-        <EdgeLayout
-          Id="Package\Llegadas 2020.Paths[Data Conversion Output]"
-          TopLeft="411,195">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-43,58"
-              Start="0,0"
-              End="-35.5,58">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-17.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-17.5,0"
-                    Point2="-21.5,0"
-                    Point3="-21.5,4" />
-                  <mssgle:LineSegment
-                    End="-21.5,54" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-21.5,54"
-                    Point2="-21.5,58"
-                    Point3="-25.5,58" />
-                  <mssgle:LineSegment
-                    End="-35.5,58" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Llegadas 2020\Data Conversion"
+          TopLeft="411,174" />
         <EdgeLayout
           Id="Package\Llegadas 2020.Paths[Excel Source Output]"
           TopLeft="272,134">
@@ -5362,7 +5758,45 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Llegadas 2020.Paths[Data Conversion Output]"
+          TopLeft="411,195">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-43,58"
+              Start="0,0"
+              End="-35.5,58">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-17.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17.5,0"
+                    Point2="-21.5,0"
+                    Point3="-21.5,4" />
+                  <mssgle:LineSegment
+                    End="-21.5,54" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21.5,54"
+                    Point2="-21.5,58"
+                    Point3="-25.5,58" />
+                  <mssgle:LineSegment
+                    End="-35.5,58" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5398,7 +5832,7 @@
     design-time-name="Package\Llegadas 2021">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="190,42"
           Id="Package\Llegadas 2021\Importar Data llegadas"
@@ -5411,40 +5845,6 @@
           Size="192,42"
           Id="Package\Llegadas 2021\Insertar Data sqlServer"
           TopLeft="176,232" />
-        <EdgeLayout
-          Id="Package\Llegadas 2021.Paths[Data Conversion Output]"
-          TopLeft="411,195">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-43,58"
-              Start="0,0"
-              End="-35.5,58">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-17.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-17.5,0"
-                    Point2="-21.5,0"
-                    Point3="-21.5,4" />
-                  <mssgle:LineSegment
-                    End="-21.5,54" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-21.5,54"
-                    Point2="-21.5,58"
-                    Point3="-25.5,58" />
-                  <mssgle:LineSegment
-                    End="-35.5,58" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Llegadas 2021.Paths[Excel Source Output]"
           TopLeft="272,134">
@@ -5476,7 +5876,45 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Llegadas 2021.Paths[Data Conversion Output]"
+          TopLeft="411,195">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-43,58"
+              Start="0,0"
+              End="-35.5,58">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-17.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17.5,0"
+                    Point2="-21.5,0"
+                    Point3="-21.5,4" />
+                  <mssgle:LineSegment
+                    End="-21.5,54" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21.5,54"
+                    Point2="-21.5,58"
+                    Point3="-25.5,58" />
+                  <mssgle:LineSegment
+                    End="-35.5,58" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5512,7 +5950,7 @@
     design-time-name="Package\Llegadas 2022">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="190,42"
           Id="Package\Llegadas 2022\Importar Data llegadas"
@@ -5525,40 +5963,6 @@
           Size="192,42"
           Id="Package\Llegadas 2022\Insertar Data sqlServer"
           TopLeft="176,232" />
-        <EdgeLayout
-          Id="Package\Llegadas 2022.Paths[Data Conversion Output]"
-          TopLeft="411,195">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-43,58"
-              Start="0,0"
-              End="-35.5,58">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-17.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-17.5,0"
-                    Point2="-21.5,0"
-                    Point3="-21.5,4" />
-                  <mssgle:LineSegment
-                    End="-21.5,54" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-21.5,54"
-                    Point2="-21.5,58"
-                    Point3="-25.5,58" />
-                  <mssgle:LineSegment
-                    End="-35.5,58" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Llegadas 2022.Paths[Excel Source Output]"
           TopLeft="272,134">
@@ -5590,7 +5994,45 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Llegadas 2022.Paths[Data Conversion Output]"
+          TopLeft="411,195">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-43,58"
+              Start="0,0"
+              End="-35.5,58">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-17.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17.5,0"
+                    Point2="-21.5,0"
+                    Point3="-21.5,4" />
+                  <mssgle:LineSegment
+                    End="-21.5,54" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21.5,54"
+                    Point2="-21.5,58"
+                    Point3="-25.5,58" />
+                  <mssgle:LineSegment
+                    End="-35.5,58" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5623,95 +6065,99 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Aeropuertos">
+    design-time-name="Package\LlegadasTotal">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="190,42"
-          Id="Package\Aeropuertos\Importar Data llegadas"
+          Id="Package\LlegadasTotal\Importar Data llegadas"
           TopLeft="177,92" />
         <NodeLayout
-          Size="192,42"
-          Id="Package\Aeropuertos\Insertar Data sqlServer"
-          TopLeft="176,232" />
-        <NodeLayout
           Size="161,42"
-          Id="Package\Aeropuertos\Data Conversion"
-          TopLeft="294,160" />
+          Id="Package\LlegadasTotal\Data Conversion"
+          TopLeft="390,165" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\LlegadasTotal\Insertar Data sqlServer"
+          TopLeft="176,232" />
         <EdgeLayout
-          Id="Package\Aeropuertos.Paths[Excel Source Output]"
+          Id="Package\LlegadasTotal.Paths[Excel Source Output]"
           TopLeft="272,134">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="102.5,26"
+              EndConnector="198.5,31"
               Start="0,0"
-              End="102.5,18.5">
+              End="198.5,23.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9" />
+                    End="0,11.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,9"
-                    Point2="0,13"
-                    Point3="4,13" />
+                    Point1="0,11.5"
+                    Point2="0,15.5"
+                    Point3="4,15.5" />
                   <mssgle:LineSegment
-                    End="98.5,13" />
+                    End="194.5,15.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="98.5,13"
-                    Point2="102.5,13"
-                    Point3="102.5,17" />
+                    Point1="194.5,15.5"
+                    Point2="198.5,15.5"
+                    Point3="198.5,19.5" />
                   <mssgle:LineSegment
-                    End="102.5,18.5" />
+                    End="198.5,23.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Aeropuertos.Paths[Data Conversion Output]"
-          TopLeft="374.5,202">
+          Id="Package\LlegadasTotal.Paths[Data Conversion Output]"
+          TopLeft="470.5,207">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-102.5,30"
+              EndConnector="-198.5,25"
               Start="0,0"
-              End="-102.5,22.5">
+              End="-198.5,17.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11" />
+                    End="0,8.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11"
-                    Point2="0,15"
-                    Point3="-4,15" />
+                    Point1="0,8.5"
+                    Point2="0,12.5"
+                    Point3="-4,12.5" />
                   <mssgle:LineSegment
-                    End="-98.5,15" />
+                    End="-194.5,12.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-98.5,15"
-                    Point2="-102.5,15"
-                    Point3="-102.5,19" />
+                    Point1="-194.5,12.5"
+                    Point2="-198.5,12.5"
+                    Point3="-198.5,16.5" />
                   <mssgle:LineSegment
-                    End="-102.5,22.5" />
+                    End="-198.5,17.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Aeropuertos\Importar Data llegadas">
+    design-time-name="Package\LlegadasTotal\Importar Data llegadas">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5724,7 +6170,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Aeropuertos\Insertar Data sqlServer">
+    design-time-name="Package\LlegadasTotal\Insertar Data sqlServer">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5740,15 +6186,15 @@
     design-time-name="Package\Regiones">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="190,42"
-          Id="Package\Regiones\Importar Data llegadas"
-          TopLeft="177,92" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="192,42"
           Id="Package\Regiones\Insertar Data sqlServer"
           TopLeft="176,232" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Regiones\Importar Data llegadas"
+          TopLeft="177,92" />
         <NodeLayout
           Size="161,42"
           Id="Package\Regiones\Data Conversion"
@@ -5784,7 +6230,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5818,14 +6266,16 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Regiones\Importar Data llegadas">
+    design-time-name="Package\Regiones\Insertar Data sqlServer">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5838,7 +6288,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Regiones\Insertar Data sqlServer">
+    design-time-name="Package\Regiones\Importar Data llegadas">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5854,15 +6304,15 @@
     design-time-name="Package\RegSec">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="190,42"
-          Id="Package\RegSec\Importar Data llegadas"
-          TopLeft="177,92" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="192,42"
           Id="Package\RegSec\Insertar Data sqlServer"
           TopLeft="176,232" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\RegSec\Importar Data llegadas"
+          TopLeft="177,92" />
         <NodeLayout
           Size="161,42"
           Id="Package\RegSec\Data Conversion"
@@ -5898,7 +6348,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5932,25 +6384,14 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\RegSec\Importar Data llegadas">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\RegSec\Insertar Data sqlServer">
     <Properties>
@@ -5964,109 +6405,8 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\LlegadasTotal">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="190,42"
-          Id="Package\LlegadasTotal\Importar Data llegadas"
-          TopLeft="177,92" />
-        <NodeLayout
-          Size="192,42"
-          Id="Package\LlegadasTotal\Insertar Data sqlServer"
-          TopLeft="176,232" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\LlegadasTotal\Data Conversion"
-          TopLeft="390,165" />
-        <EdgeLayout
-          Id="Package\LlegadasTotal.Paths[Excel Source Output]"
-          TopLeft="272,134">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="198.5,31"
-              Start="0,0"
-              End="198.5,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.5"
-                    Point2="0,15.5"
-                    Point3="4,15.5" />
-                  <mssgle:LineSegment
-                    End="194.5,15.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="194.5,15.5"
-                    Point2="198.5,15.5"
-                    Point3="198.5,19.5" />
-                  <mssgle:LineSegment
-                    End="198.5,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\LlegadasTotal.Paths[Data Conversion Output]"
-          TopLeft="470.5,207">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-198.5,25"
-              Start="0,0"
-              End="-198.5,17.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,8.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8.5"
-                    Point2="0,12.5"
-                    Point3="-4,12.5" />
-                  <mssgle:LineSegment
-                    End="-194.5,12.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-194.5,12.5"
-                    Point2="-198.5,12.5"
-                    Point3="-198.5,16.5" />
-                  <mssgle:LineSegment
-                    End="-198.5,17.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\LlegadasTotal\Importar Data llegadas">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\LlegadasTotal\Insertar Data sqlServer">
+    design-time-name="Package\RegSec\Importar Data llegadas">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
