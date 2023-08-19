@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{11C9C994-C082-4BD2-8374-82FCA23EC95C}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{ED5EF007-10A6-45F4-943D-ECB96213DE99}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -89,7 +89,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJe4qN5QZ6UqG3090uR295wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADlXDyxVsVDWD1jOaCObgQ1u+UbPHf6xx6w0/vbr5YEZgAAAAAOgAAAAAIAACAAAAAnZA+XHqaOmg1thsCVkUyckBeDno7ja5NoDa0//BwdtSAAAACvLcvtkOF7LgtXGAOMpH/gSb3pfXAhjQjtr0LEOrV/1EAAAABAnLFXA+45mDNhDWJHYLS4aA2oJmVzSLUpgwxoISbU8gXjHbbRkQMTS2rBFPbE3SKHu9tly1/vX2fc2Dj5Hx7j</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJe4qN5QZ6UqG3090uR295wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA5YeuzNWX0u9+smgLnsWuAFoj0fw4pRsjiyt/+8ht03QAAAAAOgAAAAAIAACAAAACgDZ3WBI2J6L/F6MVO0h90dE2oDZU6vN4a8BKpI7wUKiAAAABeuFhwB/l5IaS+4AjhBn9YinXaF71HG6/Aes4cRtHxUUAAAABx6uDrempH7awokPTmHuqdyJnUWEwRw4pjabqcznrr07svBJZ7KAivr6jUcgsh+ANjluG3EkSBn7ZThkHwW5j/</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -615,12 +615,6 @@
                       cachedName="Nacionalidad"
                       lineageId="Package\Llegadas 2019\Importar Data llegadas.Outputs[Excel Source Output].Columns[Nacionalidad]" />
                     <inputColumn
-                      refId="Package\Llegadas 2019\Data Conversion.Inputs[Data Conversion Input].Columns[Sexo]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Sexo"
-                      lineageId="Package\Llegadas 2019\Importar Data llegadas.Outputs[Excel Source Output].Columns[Sexo]" />
-                    <inputColumn
                       refId="Package\Llegadas 2019\Data Conversion.Inputs[Data Conversion Input].Columns[Tipo_acceso]"
                       cachedDataType="wstr"
                       cachedLength="255"
@@ -755,28 +749,6 @@
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\Llegadas 2019\Importar Data llegadas.Outputs[Excel Source Output].Columns[Nacionalidad]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Llegadas 2019\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sexo]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Llegadas 2019\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sexo]"
-                      name="Copy of Sexo"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Llegadas 2019\Importar Data llegadas.Outputs[Excel Source Output].Columns[Sexo]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -1000,16 +972,6 @@
                       name="Nacionalidad"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Llegadas 2019\Importar Data llegadas.Outputs[Excel Source Output].Columns[Sexo]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Llegadas 2019\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Sexo]"
-                      length="255"
-                      lineageId="Package\Llegadas 2019\Importar Data llegadas.Outputs[Excel Source Output].Columns[Sexo]"
-                      name="Sexo"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Llegadas 2019\Importar Data llegadas.Outputs[Excel Source Output].Columns[Tipo_acceso]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -1133,12 +1095,6 @@
                       length="255"
                       lineageId="Package\Llegadas 2019\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Nacionalidad]"
                       name="Nacionalidad" />
-                    <outputColumn
-                      refId="Package\Llegadas 2019\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Sexo]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Llegadas 2019\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Sexo]"
-                      name="Sexo" />
                     <outputColumn
                       refId="Package\Llegadas 2019\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Tipo_acceso]"
                       dataType="wstr"
@@ -1279,14 +1235,6 @@
                       externalMetadataColumnId="Package\Llegadas 2019\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Puesto_migratorio]"
                       lineageId="Package\Llegadas 2019\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Puesto_migratorio]" />
                     <inputColumn
-                      refId="Package\Llegadas 2019\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of Sexo]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of Sexo"
-                      externalMetadataColumnId="Package\Llegadas 2019\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Sexo]"
-                      lineageId="Package\Llegadas 2019\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sexo]" />
-                    <inputColumn
                       refId="Package\Llegadas 2019\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of Tipo_acceso]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -1359,12 +1307,6 @@
                       dataType="str"
                       length="255"
                       name="Nacionalidad" />
-                    <externalMetadataColumn
-                      refId="Package\Llegadas 2019\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Sexo]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Sexo" />
                     <externalMetadataColumn
                       refId="Package\Llegadas 2019\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Tipo_acceso]"
                       codePage="1252"
@@ -1487,12 +1429,6 @@
                       cachedLength="255"
                       cachedName="Nacionalidad"
                       lineageId="Package\Llegadas 2020\Importar Data llegadas.Outputs[Excel Source Output].Columns[Nacionalidad]" />
-                    <inputColumn
-                      refId="Package\Llegadas 2020\Data Conversion.Inputs[Data Conversion Input].Columns[Sexo]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Sexo"
-                      lineageId="Package\Llegadas 2020\Importar Data llegadas.Outputs[Excel Source Output].Columns[Sexo]" />
                     <inputColumn
                       refId="Package\Llegadas 2020\Data Conversion.Inputs[Data Conversion Input].Columns[Tipo_acceso]"
                       cachedDataType="wstr"
@@ -1628,28 +1564,6 @@
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\Llegadas 2020\Importar Data llegadas.Outputs[Excel Source Output].Columns[Nacionalidad]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Llegadas 2020\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sexo]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Llegadas 2020\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sexo]"
-                      name="Copy of Sexo"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Llegadas 2020\Importar Data llegadas.Outputs[Excel Source Output].Columns[Sexo]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -1873,16 +1787,6 @@
                       name="Nacionalidad"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Llegadas 2020\Importar Data llegadas.Outputs[Excel Source Output].Columns[Sexo]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Llegadas 2020\Importar Data llegadas.Outputs[Excel Source Output].ExternalColumns[Sexo]"
-                      length="255"
-                      lineageId="Package\Llegadas 2020\Importar Data llegadas.Outputs[Excel Source Output].Columns[Sexo]"
-                      name="Sexo"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Llegadas 2020\Importar Data llegadas.Outputs[Excel Source Output].Columns[Tipo_acceso]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -2006,12 +1910,6 @@
                       length="255"
                       lineageId="Package\Llegadas 2020\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Nacionalidad]"
                       name="Nacionalidad" />
-                    <outputColumn
-                      refId="Package\Llegadas 2020\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Sexo]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Llegadas 2020\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Sexo]"
-                      name="Sexo" />
                     <outputColumn
                       refId="Package\Llegadas 2020\Importar Data llegadas.Outputs[Excel Source Error Output].Columns[Tipo_acceso]"
                       dataType="wstr"
@@ -2152,14 +2050,6 @@
                       externalMetadataColumnId="Package\Llegadas 2020\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Puesto_migratorio]"
                       lineageId="Package\Llegadas 2020\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Puesto_migratorio]" />
                     <inputColumn
-                      refId="Package\Llegadas 2020\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of Sexo]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of Sexo"
-                      externalMetadataColumnId="Package\Llegadas 2020\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Sexo]"
-                      lineageId="Package\Llegadas 2020\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sexo]" />
-                    <inputColumn
                       refId="Package\Llegadas 2020\Insertar Data sqlServer.Inputs[OLE DB Destination Input].Columns[Copy of Tipo_acceso]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -2230,12 +2120,6 @@
                       dataType="str"
                       length="255"
                       name="Nacionalidad" />
-                    <externalMetadataColumn
-                      refId="Package\Llegadas 2020\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Sexo]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Sexo" />
                     <externalMetadataColumn
                       refId="Package\Llegadas 2020\Insertar Data sqlServer.Inputs[OLE DB Destination Input].ExternalColumns[Tipo_acceso]"
                       codePage="1252"
